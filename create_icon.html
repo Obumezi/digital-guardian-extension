@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="iconCanvas" width="128" height="128" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("iconCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#4CAF50";
+ctx.fillRect(0, 0, 128, 128);
+ctx.font = "bold 80px Arial";
+ctx.fillStyle = "white";
+ctx.textAlign = "center";
+ctx.fillText("AB", 64, 90);
+
+var link = document.createElement('a');
+link.download = 'icon.png';
+link.href = c.toDataURL("image/png").replace("image/png", "image/octet-stream");
+link.click();
+</script>
+
+</body>
+</html>
